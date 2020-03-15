@@ -1,14 +1,14 @@
 <template>
   <div class="v-header">
     <div
-      v-if="!isRoot"
+      v-show="!isRoot"
       class="v-header__back"
       @click="goBack">
       <i class="material-icons">keyboard_arrow_left</i>
       <span>Back</span>
     </div>
     <div
-      v-if="!isRoot"
+      v-show="!isRoot"
       class="v-header__user-info">
       <span>{{currentUserChat}}</span>
     </div>
