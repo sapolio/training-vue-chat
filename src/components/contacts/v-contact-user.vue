@@ -6,7 +6,7 @@
     </div>
     <div
       class="user__status"
-      :class="className"
+      :class="contact_data.status"
     ></div>
   </div>
 </template>
