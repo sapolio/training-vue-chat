@@ -20,7 +20,8 @@ export default {
   },
   methods: {
     ...mapActions([
-      'FETCH_CONTACTS'
+      'FETCH_CONTACTS',
+      'SET_USER_TO_HEADER'
     ]),
     toContactInfo(contact) {
       this.$router.push({
@@ -28,7 +29,8 @@ export default {
         query: {
           id: contact.id
         }
-      })
+      }),
+      this.SET_USER_TO_HEADER(contact.name)
     }
   },
   computed: {

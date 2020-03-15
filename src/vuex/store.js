@@ -9,12 +9,16 @@ const contactsUrl = 'http://localhost:3000/contacts',
 
 let store = new Vuex.Store({
   state: {
-    contacts: []
+    contacts: [],
+    currentUserChat: ''
   },
   getters: {},
   mutations: {
     SET_CONTACTS_TO_STORE(state, contacts) {
       state.contacts = contacts
+    },
+    SET_USER_TO_HEAD(state, user) {
+      state.currentUserChat = user ? user : ''
     }
   },
   actions: {
@@ -25,6 +29,9 @@ let store = new Vuex.Store({
         .then(contacts => {
           commit('SET_CONTACTS_TO_STORE', contacts)
         })
+    },
+    SET_USER_TO_HEADER({ commit }, user) {
+      commit('SET_USER_TO_HEAD', user)
     }
   }
 })
