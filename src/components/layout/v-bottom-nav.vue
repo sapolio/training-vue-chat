@@ -4,7 +4,7 @@
       <i class="material-icons">person_pin</i>
     </router-link>
     <router-link :to="{name: 'chats'}">
-      <i class="material-icons">chat</i>
+      <i class="material-icons">chats</i>
     </router-link>
     <router-link :to="{name: 'contacts'}">
       <i class="material-icons">settings</i>
