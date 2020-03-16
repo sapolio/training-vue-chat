@@ -55,7 +55,6 @@ methods: {
       type: 'own'
     }
     user.chat.push(message)
-    console.log(user)
     this.SET_MESSAGE_TO_CHAT(user)
       .then(() => {
         this.FETCH_CHATS()
